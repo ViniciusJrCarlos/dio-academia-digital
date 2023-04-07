@@ -1,5 +1,6 @@
 package me.dio.academia.digital.service;
 
+import me.dio.academia.digital.entity.AvaliacaoFisica;
 import me.dio.academia.digital.entity.Matricula;
 import me.dio.academia.digital.entity.form.MatriculaForm;
 
@@ -26,10 +27,28 @@ public interface IMatriculaService {
    */
   List<Matricula> getAll();
 
+  List<Matricula> getAll(String bairro);
+
   /**
    * Deleta uma Matrícula específica.
    * @param id - id da Matrícula que será removida.
    */
   void delete(Long id);
 
+  //List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id);
+  //List<Matricula>getAllMatricula(String bairro);
+
+  /*
+   public List<Matricula> getAll(String bairro) {
+
+        if(bairro == null) {
+            return matriculaRepository.findAll();
+
+        }else {
+            return matriculaRepository.findAlunosMatriculadosBairro(bairro);
+        }
+
+   */
+
 }
+

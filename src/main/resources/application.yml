@@ -1,0 +1,39 @@
+server.port: 8081
+#spring:
+    #datasource:
+      #url: jdbc:postgresql://localhost:5432/academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
+      #url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/academia
+      #username: postgres
+      #password: admin
+      #driver-class-name: com.mysql.cj.jdbc.Driver
+#jpa:
+  #show-sql: true
+  #hibernate:
+    #ddl-auto: update
+    #properties:
+      #hibernate.format_sql: true
+      #hibernate.show.sql: true
+      #hibernate.use_sql_comments: true
+      #hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+      #hibernate: naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  #database: org.hibernate.dialect.MySQ8LDialect
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/academia2?useTimezone=true&serverTimezone=UTC&useLegacyDate
+    #?useTimezone=true&serverTimezone=UTC&useLegacyDate
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+
